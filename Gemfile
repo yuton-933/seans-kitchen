@@ -20,8 +20,7 @@ gem 'snapshot', '~> 0.2.3'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  # gem 'dotenv-rails', '~> 2.5.0', require: 'dotenv/rails-now' # 環境変数の管理
-  gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
+  gem 'dotenv-rails', '~> 2.7', '>= 2.7.6' #独学pでは2.5.0 だがrailties <6.0に依存し他とコンフルのでVerUP
   gem 'pry-byebug'             # binding.pry
 end
 
