@@ -7,33 +7,32 @@ ruby '2.7.3'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
 # Use mysql as the database for Active Record
 gem 'mysql2', '~> 0.5'
-# Use Puma as the app server
-gem 'puma', '~> 5.0'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder', '~> 2.7'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-# Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'puma', '~> 3.11'
+gem 'bootsnap', '>= 1.1.0', require: false
+gem 'hirb'                # コンソール出力結果を表にする
+gem 'hirb-unicode'        # コンソール文字の表示を補正する
+gem 'knock', '~> 2.1.1'   # JWT認証機構
+gem 'bcrypt', '~> 3.1.11' # password暗号化
+gem 'aws-ses', '~> 0.6'   # 本番環境 mailer
 
-# Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
-
-# Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.4', require: false
-
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem 'rack-cors'
+#dependency
+gem 'snapshot', '~> 0.2.3'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # gem 'dotenv-rails', '~> 2.5.0', require: 'dotenv/rails-now' # 環境変数の管理
+  gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
+  gem 'pry-byebug'             # binding.pry
 end
 
 group :development do
-  gem 'listen', '~> 3.3'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :test do
+  gem 'minitest-reporters', '~> 1.1.9'  # test色付け
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
