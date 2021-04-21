@@ -46,7 +46,8 @@ const config = {
   ],
 
   axios: {
-    proxy: true
+    proxy: true,
+    baseURL: process.env.BASE_URL	|| '/'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -55,6 +56,7 @@ const config = {
 }
 
 if (process.env.NODE_ENV === 'development') {
+  config.devModules.push('@nuxtjs/eslint-module'),
   config.proxy = { '/api': 'http://localhost:3000' }
 }
 
