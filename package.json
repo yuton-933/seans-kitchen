@@ -1,0 +1,10 @@
+{
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "15.14.0",
+    "yarn": "1.22.10"
+  },
+  "scripts": {
+    "postinstall": "cd frontend && yarn install && yarn build"
+  }
+}
