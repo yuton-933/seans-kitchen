@@ -28,6 +28,7 @@ const config = {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    'plugins/vuetify.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -35,6 +36,7 @@ const config = {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/vuetify'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
