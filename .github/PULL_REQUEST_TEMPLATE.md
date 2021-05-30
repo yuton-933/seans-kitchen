@@ -1,5 +1,6 @@
 >### 関連issue
-> Connected to 
+> Connected to #
+>
 > #### 何の為にどうしたいのか
 >
 > #### タスク
